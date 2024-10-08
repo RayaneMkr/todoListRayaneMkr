@@ -19,6 +19,9 @@ public class StartApplication extends Application {
         mainStage.setScene(scene);
         mainStage.show();
     }
+
+    public static void main(String[] args) {launch();}
+
     public static void sceneConnexion(String NomDuFichier) {
         mainStage.close();
         FXMLLoader fxmlLoader = new FXMLLoader(StartApplication.class.getResource(NomDuFichier + ".fxml"));
@@ -33,7 +36,5 @@ public class StartApplication extends Application {
         }
 
     }
-    public static void main(String[] args) {
-        launch();
-    }
+
 }
