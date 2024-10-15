@@ -23,11 +23,7 @@ public class ListeController {
             if (ListeRepository.ajouterListe(listeField.getText()) == null) {
                 erreurText.setText("Erreur lors de l'ajout de la liste");
             } else {
-                try {
-                    StartApplication.sceneConnexion("accueil/accueilview.fxml");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                StartApplication.sceneConnexion("accueil/accueilview.fxml");
             }
         }
     }

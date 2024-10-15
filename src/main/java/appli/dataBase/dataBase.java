@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class dataBase {
         private String server = "localhost";
-        private String nomDeLaBase = "Todolist_JavaFx";
+        private String nomDeLaBase = "todolist_javafx";
         private String utilisateur = "root";
         private String mdp = "";
 
         public String getUrl() {
-            return "jdbc:mysql://" + server + "/" + nomDeLaBase + "?serverTimezone=UTC";
+            return "jdbc:mysql://"+ server + "/" + nomDeLaBase + "?serverTimezone=UTC";
         }
 
         public Connection getConnection() {

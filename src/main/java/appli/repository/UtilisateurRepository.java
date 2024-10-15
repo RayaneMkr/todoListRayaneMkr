@@ -57,10 +57,8 @@ public class UtilisateurRepository {
 
         PreparedStatement statement = cnx.prepareStatement("SELECT * FROM utilisateur WHERE email = ?");
         statement.setString(1, email);
-
-        if (statement.executeQuery().next()) {
-            ResultSet result = statement.executeQuery();
-
+        ResultSet result = statement.executeQuery();
+        if (result.next()) {
             String nom = result.getString("nom");
             String prenom = result.getString("prenom");
             String mail = result.getString("email");
